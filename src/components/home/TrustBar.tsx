@@ -1,6 +1,7 @@
 import { ShieldCheck, Sparkles, ReceiptText, Zap } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { cn } from "@/lib/cn";
 
 const points = [
   { icon: ShieldCheck, label: "Licensed Professionals" },
@@ -16,7 +17,13 @@ export function TrustBar() {
         {points.map(({ icon: Icon, label }, i) => (
           <Reveal key={label} delay={i * 70} distance={12}>
             <div className="flex items-center gap-3 px-5 py-6">
-              <Icon className="size-[18px] shrink-0 text-[var(--color-signal-deep)]" aria-hidden />
+              <Icon
+                className={cn(
+                  "size-[18px] shrink-0",
+                  label === "Safe Treatment" ? "text-[var(--color-secondary-deep)]" : "text-[var(--color-signal-deep)]"
+                )}
+                aria-hidden
+              />
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--color-ink)]">
                 {label}
               </span>

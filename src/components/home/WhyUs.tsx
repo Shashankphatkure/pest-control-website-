@@ -1,8 +1,9 @@
 import { GraduationCap, ShieldCheck, ReceiptText, LifeBuoy } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { LinkButton } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { cn } from "@/lib/cn";
 
 const reasons = [
   {
@@ -40,7 +41,13 @@ export function WhyUs() {
             {reasons.map(({ icon: Icon, title, description }, i) => (
               <Reveal key={title} delay={(i % 2) * 100}>
                 <div className="flex flex-col gap-3 border-l-2 border-[var(--color-ink)]/10 pl-4">
-                  <Icon className="size-5 text-[var(--color-signal-deep)]" aria-hidden />
+                  <Icon
+                    className={cn(
+                      "size-5",
+                      title === "Safe Treatment" ? "text-[var(--color-secondary-deep)]" : "text-[var(--color-signal-deep)]"
+                    )}
+                    aria-hidden
+                  />
                   <h3 className="font-heading text-base font-bold text-[var(--color-charcoal)]">{title}</h3>
                   <p className="text-sm leading-relaxed text-[var(--color-charcoal)]/60">{description}</p>
                 </div>
@@ -53,7 +60,12 @@ export function WhyUs() {
         </div>
 
         <Reveal className="aspect-[4/5] w-full" delay={120}>
-          <PhotoPlaceholder label="Technician performing a safe, professional treatment" className="size-full" variant="dark" />
+          <Photo
+            src="/images/site/technician.jpg"
+            alt="Pest control technician in protective gear applying treatment"
+            className="size-full"
+            variant="dark"
+          />
         </Reveal>
       </div>
     </Section>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Building2, ShieldCheck, ClipboardList, Clock } from "lucide-react";
+import { ShieldCheck, ClipboardList, Clock } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { LinkButton } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -58,7 +58,11 @@ export default function CommercialPage() {
             </LinkButton>
           </Reveal>
           <Reveal className="aspect-[4/3] w-full" delay={100} threshold={0.05}>
-            <PhotoPlaceholder label="Technician inspecting a commercial kitchen" icon={Building2} className="size-full" />
+            <Photo
+              src="/images/site/commercial-kitchen.jpg"
+              alt="Commercial kitchen where staff prepare food"
+              className="size-full"
+            />
           </Reveal>
         </div>
       </Section>

@@ -12,11 +12,12 @@ const base =
 const variants: Record<Variant, string> = {
   primary: "bg-[var(--color-ink)] text-[var(--color-paper)] hover:bg-[var(--color-ink-soft)]",
   secondary:
-    "bg-[var(--color-signal)] text-[var(--color-ink)] hover:bg-[color-mix(in_oklab,var(--color-signal)_85%,black)]",
+    "bg-[var(--color-signal-deep)] text-white hover:bg-[color-mix(in_oklab,var(--color-signal-deep)_85%,black)]",
   outline:
     "border border-[var(--color-ink)]/25 text-[var(--color-ink)] hover:border-[var(--color-ink)] hover:bg-[var(--color-ink)]/[0.04]",
   "outline-inverse": "border border-white/25 text-[var(--color-paper)] hover:border-white/50 hover:bg-white/[0.06]",
-  whatsapp: "bg-[#1c5a3a] text-white hover:bg-[#164a2f]",
+  whatsapp:
+    "bg-[var(--color-secondary-deep)] text-white hover:bg-[color-mix(in_oklab,var(--color-secondary-deep)_85%,black)]",
   ghost: "text-[var(--color-ink)] hover:bg-[var(--color-ink)]/[0.04]",
 };
 

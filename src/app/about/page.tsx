@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GraduationCap, ShieldCheck, ReceiptText, LifeBuoy } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { LinkButton } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -52,7 +52,11 @@ export default function AboutPage() {
             </LinkButton>
           </Reveal>
           <Reveal className="aspect-[4/3] w-full" delay={100} threshold={0.05}>
-            <PhotoPlaceholder label="Technician on-site" className="size-full" />
+            <Photo
+              src="/images/site/technician.jpg"
+              alt="Pest control technician in protective gear applying treatment"
+              className="size-full"
+            />
           </Reveal>
         </div>
       </Section>

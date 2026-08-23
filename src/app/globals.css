@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #111313;
-  --color-ink-soft: #23261f;
-  --color-paper: #f6f6f2;
-  --color-paper-dim: #eae7db;
+  --color-ink: #131417;
+  --color-ink-soft: #20232a;
+  --color-paper: #f5f6f8;
+  --color-paper-dim: #e8eaee;
   --color-white: #ffffff;
-  --color-signal: #86b83f;
-  --color-signal-deep: #193b2a;
+
+  /* Primary accent: blue. "-deep" is the readable variant used for text/icons
+     on light backgrounds; the base variant is used for fills/dots and solid
+     buttons on dark backgrounds, where a brighter tone reads better. */
+  --color-signal: #2f6fff;
+  --color-signal-deep: #1d4ed8;
+
+  /* Secondary accent: green. Used deliberately, not everywhere — WhatsApp
+     actions, success/checkmark moments, and a couple of "safe/eco" highlights. */
+  --color-secondary: #16a34a;
+  --color-secondary-deep: #15803d;
+  --color-secondary-soft: color-mix(in oklab, var(--color-secondary) 14%, var(--color-paper));
 
   /* legacy aliases kept for components still referencing the old names */
   --color-charcoal: var(--color-ink);
@@ -35,6 +45,9 @@
   --color-accent: var(--color-signal);
   --color-accent-dark: var(--color-signal-deep);
   --color-accent-soft: var(--color-accent-soft);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-deep: var(--color-secondary-deep);
+  --color-secondary-soft: var(--color-secondary-soft);
 
   --font-sans: var(--font-body);
   --font-heading: var(--font-display);
@@ -83,7 +96,7 @@
 
   ::selection {
     background: var(--color-signal);
-    color: var(--color-ink);
+    color: var(--color-white);
   }
 
   :focus-visible {

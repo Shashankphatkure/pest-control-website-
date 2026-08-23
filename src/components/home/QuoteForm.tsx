@@ -39,7 +39,7 @@ export function QuoteForm() {
   if (submitted) {
     return (
       <div className="flex flex-col items-center gap-4 border border-[var(--color-charcoal)]/10 bg-white px-8 py-14 text-center">
-        <span className="flex size-14 items-center justify-center border border-[var(--color-signal-deep)]/25 bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]">
+        <span className="flex size-14 items-center justify-center border border-[var(--color-secondary-deep)]/25 bg-[var(--color-secondary-soft)] text-[var(--color-secondary-deep)]">
           <CheckCircle2 className="size-7" aria-hidden />
         </span>
         <h3 className="font-heading text-xl font-bold text-[var(--color-charcoal)]">Thanks! We&apos;ll contact you shortly.</h3>

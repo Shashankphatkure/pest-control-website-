@@ -76,6 +76,9 @@ export function Footer() {
             <Link href="/terms" className="hover:text-[var(--color-cream)]/80">
               Terms
             </Link>
+            <Link href="/credits" className="hover:text-[var(--color-cream)]/80">
+              Photo Credits
+            </Link>
           </div>
         </Container>
       </div>

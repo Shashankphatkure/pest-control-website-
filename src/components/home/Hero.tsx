@@ -1,8 +1,8 @@
-import { MessageCircle, ShieldCheck, Sparkles, Wrench } from "lucide-react";
+import { MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Section";
 import { LinkButton } from "@/components/ui/Button";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { PestPickerCard } from "@/components/home/PestPickerCard";
 import { business, whatsappHref, defaultWhatsappMessage } from "@/lib/site-config";
@@ -75,11 +75,12 @@ export function Hero() {
 
         <Reveal className="flex flex-col" delay={100} threshold={0.05}>
           <div className="aspect-[5/4] w-full">
-            <PhotoPlaceholder
-              label="Technician photo — inspecting a kitchen for pest activity"
-              icon={Wrench}
+            <Photo
+              src="/images/site/technician.jpg"
+              alt="Pest control technician in protective gear applying treatment"
               className="size-full"
               frame
+              priority
             />
           </div>
           <PestPickerCard className="border-t-0" />

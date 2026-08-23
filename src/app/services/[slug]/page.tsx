@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CheckCircle2, Search, ClipboardCheck, SprayCan, LifeBuoy } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+import { Photo } from "@/components/ui/Photo";
 import { LinkButton } from "@/components/ui/Button";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { Reveal } from "@/components/ui/Reveal";
 import { ProcessStepsSection } from "@/components/shared/ProcessStepsSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { serviceDetails } from "@/lib/service-details";
-import { pestIconMap } from "@/lib/pest-icons";
+import { pestImageMap } from "@/lib/pest-images";
 import { services, business } from "@/lib/site-config";
 
 const processSteps = [
@@ -38,7 +38,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
   if (!detail) notFound();
 
   const summary = services.find((s) => s.slug === slug);
-  const Icon = summary ? pestIconMap[summary.key] : undefined;
+  const image = pestImageMap[summary?.key ?? "other"];
 
   return (
     <>
@@ -54,7 +54,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
             </LinkButton>
           </Reveal>
           <Reveal className="aspect-[4/3] w-full" delay={100} threshold={0.05}>
-            <PhotoPlaceholder label={`${detail.name} — technician on site`} icon={Icon} className="size-full" />
+            <Photo src={image.src} alt={image.alt} className="size-full" />
           </Reveal>
         </div>
       </Section>
@@ -69,7 +69,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
               delay={(i % 2) * 100}
               className="flex items-start gap-3 border border-[var(--color-charcoal)]/10 bg-[var(--color-cream)] p-4"
             >
-              <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[var(--color-accent-dark)]" aria-hidden />
+              <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[var(--color-secondary-deep)]" aria-hidden />
               <span className="text-sm leading-relaxed text-[var(--color-charcoal)]/75">{sign}</span>
             </Reveal>
           ))}
