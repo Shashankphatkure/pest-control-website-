@@ -14,7 +14,7 @@ export function ResidentialCommercial() {
       />
 
       <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <Reveal className="flex flex-col border border-[var(--color-ink)]/10 bg-white">
+        <Reveal className="flex flex-col overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 bg-white">
           <div className="aspect-[16/9] w-full">
             <Photo src="/images/site/residential.jpg" alt="Residential apartment buildings" className="size-full" />
           </div>
@@ -31,7 +31,7 @@ export function ResidentialCommercial() {
 
         <Reveal
           delay={100}
-          className="flex flex-col border border-[var(--color-ink)]/10 bg-[var(--color-charcoal)] text-[var(--color-cream)]"
+          className="flex flex-col overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 bg-[var(--color-charcoal)] text-[var(--color-cream)]"
         >
           <div className="aspect-[16/9] w-full">
             <Photo

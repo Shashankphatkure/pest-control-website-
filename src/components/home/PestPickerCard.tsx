@@ -11,7 +11,7 @@ export function PestPickerCard({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "border border-[var(--color-ink)]/12 bg-white p-5",
+        "rounded-b-[var(--radius)] border border-[var(--color-ink)]/12 bg-white p-5",
         className
       )}
     >
@@ -23,7 +23,7 @@ export function PestPickerCard({ className }: { className?: string }) {
           <Link
             key={pest.key}
             href={`/contact?pest=${pest.key}`}
-            className="border border-[var(--color-ink)]/15 px-3 py-1.5 text-xs font-medium text-[var(--color-ink)]/80 transition-colors hover:border-[var(--color-signal-deep)] hover:text-[var(--color-signal-deep)]"
+            className="rounded-[var(--radius-sm)] border border-[var(--color-ink)]/15 px-3 py-1.5 text-xs font-medium text-[var(--color-ink)]/80 transition-colors hover:border-[var(--color-signal-deep)] hover:text-[var(--color-signal-deep)]"
           >
             {pest.name.replace(" Control", "")}
           </Link>

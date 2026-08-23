@@ -19,7 +19,7 @@ export default function AreasPage() {
           title={`Pest control across ${business.region}`}
           description="If your area isn't listed, get in touch — we may still be able to help."
         />
-        <div className="mt-12 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 border border-[var(--color-ink)]/10 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 sm:grid-cols-3 lg:grid-cols-5">
           {serviceAreas.map((area, i) => (
             <Reveal
               key={area}

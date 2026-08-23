@@ -38,8 +38,8 @@ export function QuoteForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center gap-4 border border-[var(--color-charcoal)]/10 bg-white px-8 py-14 text-center">
-        <span className="flex size-14 items-center justify-center border border-[var(--color-secondary-deep)]/25 bg-[var(--color-secondary-soft)] text-[var(--color-secondary-deep)]">
+      <div className="flex flex-col items-center gap-4 rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-white px-8 py-14 text-center">
+        <span className="flex size-14 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-secondary-deep)]/25 bg-[var(--color-secondary-soft)] text-[var(--color-secondary-deep)]">
           <CheckCircle2 className="size-7" aria-hidden />
         </span>
         <h3 className="font-heading text-xl font-bold text-[var(--color-charcoal)]">Thanks! We&apos;ll contact you shortly.</h3>
@@ -51,7 +51,7 @@ export function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="border border-[var(--color-charcoal)]/10 bg-white p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-white p-6 sm:p-8">
       <StepIndicator step={step} />
 
       {step === 1 && (
@@ -66,7 +66,7 @@ export function QuoteForm() {
                 type="button"
                 onClick={() => setPest(option.key)}
                 className={cn(
-                  "border px-4 py-3 text-sm font-medium transition-colors",
+                  "rounded-[var(--radius-sm)] border px-4 py-3 text-sm font-medium transition-colors",
                   pest === option.key
                     ? "border-[var(--color-accent-dark)] bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]"
                     : "border-[var(--color-charcoal)]/15 text-[var(--color-charcoal)]/75 hover:border-[var(--color-charcoal)]/35"
@@ -94,7 +94,7 @@ export function QuoteForm() {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               placeholder="e.g. Andheri West, Mumbai"
-              className="h-12 border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
+              className="h-12 rounded-[var(--radius-sm)] border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
             />
           </label>
           <div className="flex gap-3">
@@ -120,7 +120,7 @@ export function QuoteForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
-              className="h-12 border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
+              className="h-12 rounded-[var(--radius-sm)] border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
             />
           </label>
           <label className="flex flex-col gap-2 text-sm font-medium text-[var(--color-charcoal)]/75">
@@ -131,7 +131,7 @@ export function QuoteForm() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="10-digit mobile number"
-              className="h-12 border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
+              className="h-12 rounded-[var(--radius-sm)] border border-[var(--color-charcoal)]/20 bg-[var(--color-cream)] px-4 text-base text-[var(--color-charcoal)] outline-none focus:border-[var(--color-accent-dark)]"
             />
           </label>
           <div className="flex gap-3">

@@ -50,7 +50,7 @@ export function Navbar() {
 
       <Container className="flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight" onClick={() => setOpen(false)}>
-          <span className="flex size-9 items-center justify-center border border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-signal)]">
+          <span className="flex size-9 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-signal)]">
             <ShieldMark />
           </span>
           {business.name}
@@ -84,7 +84,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="flex size-10 items-center justify-center border border-[var(--color-ink)]/15 text-[var(--color-ink)] lg:hidden"
+          className="flex size-10 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-ink)]/15 text-[var(--color-ink)] lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}

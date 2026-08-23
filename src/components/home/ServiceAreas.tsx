@@ -12,7 +12,7 @@ export function ServiceAreas() {
         align="center"
       />
 
-      <div className="mt-12 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 border border-[var(--color-ink)]/10 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="mt-12 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 sm:grid-cols-3 lg:grid-cols-5">
         {serviceAreas.map((area, i) => (
           <Reveal
             key={area}

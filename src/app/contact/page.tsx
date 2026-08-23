@@ -36,7 +36,7 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={120}>
-          <Suspense fallback={<div className="h-[420px] border border-[var(--color-charcoal)]/10 bg-white" />}>
+          <Suspense fallback={<div className="h-[420px] rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-white" />}>
             <QuoteForm />
           </Suspense>
         </Reveal>
@@ -59,8 +59,8 @@ function ContactRow({
   delay?: number;
 }) {
   const content = (
-    <div className="flex items-start gap-4 border border-[var(--color-charcoal)]/10 bg-white p-5">
-      <span className="flex size-10 shrink-0 items-center justify-center border border-[var(--color-signal-deep)]/25 bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]">
+    <div className="flex items-start gap-4 rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-white p-5">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-signal-deep)]/25 bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]">
         <Icon className="size-5" aria-hidden />
       </span>
       <div>

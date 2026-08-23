@@ -7,7 +7,7 @@ type Variant = "primary" | "secondary" | "outline" | "outline-inverse" | "whatsa
 type Size = "md" | "lg";
 
 const base =
-  "group inline-flex items-center justify-center gap-2.5 rounded-[5px] font-mono font-semibold uppercase tracking-[0.04em] transition-all duration-150 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-signal-deep)] disabled:pointer-events-none disabled:opacity-40";
+  "group inline-flex items-center justify-center gap-2.5 rounded-[var(--radius)] font-mono font-semibold uppercase tracking-[0.04em] transition-all duration-150 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-signal-deep)] disabled:pointer-events-none disabled:opacity-40";
 
 const variants: Record<Variant, string> = {
   primary: "bg-[var(--color-ink)] text-[var(--color-paper)] hover:bg-[var(--color-ink-soft)]",

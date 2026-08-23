@@ -11,13 +11,13 @@ export function ServiceCard({ service }: { service: ServiceSummary }) {
   return (
     <Link
       href={href}
-      className="group flex flex-col border border-[var(--color-ink)]/10 bg-white transition-colors duration-200 hover:border-[var(--color-signal-deep)]"
+      className="group flex flex-col overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 bg-white transition-colors duration-200 hover:border-[var(--color-signal-deep)]"
     >
       <div className="relative aspect-[16/11] overflow-hidden">
         <div className="size-full transition-transform duration-500 ease-out group-hover:scale-[1.03]">
           <Photo src={image.src} alt={image.alt} className="size-full" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
         </div>
-        <span className="absolute left-0 top-0 border-b border-r border-[var(--color-ink)]/10 bg-white px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-[var(--color-ink)]/60">
+        <span className="absolute left-0 top-0 rounded-br-[8px] border-b border-r border-[var(--color-ink)]/10 bg-white px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-[var(--color-ink)]/60">
           {service.slug ? "Service" : "Add-on"}
         </span>
       </div>

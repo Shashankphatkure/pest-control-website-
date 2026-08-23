@@ -8,7 +8,7 @@ export function FAQAccordion({ items }: { items: { question: string; answer: str
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col divide-y divide-[var(--color-charcoal)]/10 border border-[var(--color-charcoal)]/10 bg-white">
+    <div className="mx-auto flex max-w-3xl flex-col divide-y divide-[var(--color-charcoal)]/10 overflow-hidden rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-white">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (

@@ -10,7 +10,7 @@ export function Pricing() {
   if (!hasRealPricing) {
     return (
       <Section tone="white">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 border border-[var(--color-ink)]/12 bg-[var(--color-cream)] px-8 py-14 text-center">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 rounded-[var(--radius)] border border-[var(--color-ink)]/12 bg-[var(--color-cream)] px-8 py-14 text-center">
           <SectionHeading
             eyebrow="Pricing"
             title="Get a personalised quote in minutes."
@@ -37,7 +37,7 @@ export function Pricing() {
       />
       <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {pricing.map((item, i) => (
-          <Reveal key={item.name} delay={i * 80} className="flex flex-col gap-2 border border-[var(--color-ink)]/10 bg-[var(--color-cream)] p-6">
+          <Reveal key={item.name} delay={i * 80} className="flex flex-col gap-2 rounded-[var(--radius)] border border-[var(--color-ink)]/10 bg-[var(--color-cream)] p-6">
             <h3 className="font-heading text-base font-bold text-[var(--color-charcoal)]">{item.name}</h3>
             <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-charcoal)]/50">Starting at</p>
             <p className="font-heading text-2xl font-extrabold text-[var(--color-accent-dark)]">{item.startingPrice}</p>

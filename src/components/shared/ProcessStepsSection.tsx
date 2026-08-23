@@ -41,7 +41,7 @@ export function ProcessStepsSection({
               i === 0 && "lg:border-l-0 lg:pl-0"
             )}
           >
-            <div className="relative z-10 flex size-14 items-center justify-center border border-[var(--color-ink)]/15 bg-[var(--color-cream)]">
+            <div className="relative z-10 flex size-14 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-ink)]/15 bg-[var(--color-cream)]">
               <Icon className="size-5 text-[var(--color-signal-deep)]" aria-hidden />
             </div>
             <span className="mt-4 font-mono text-xs font-bold tracking-[0.1em] text-[var(--color-signal-deep)]">

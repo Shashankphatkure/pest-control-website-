@@ -69,7 +69,7 @@ export default function CommercialPage() {
 
       <Section tone="white">
         <SectionHeading eyebrow="Who We Work With" title="Built for commercial premises" align="center" />
-        <div className="mt-10 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 border border-[var(--color-ink)]/10 sm:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 divide-x divide-y divide-[var(--color-ink)]/10 overflow-hidden rounded-[var(--radius)] border border-[var(--color-ink)]/10 sm:grid-cols-4">
           {industries.map((industry, i) => (
             <Reveal
               key={industry}
@@ -88,7 +88,7 @@ export default function CommercialPage() {
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
           {reasons.map(({ icon: Icon, title, description }, i) => (
             <Reveal key={title} delay={i * 100} className="flex flex-col items-center gap-3 text-center">
-              <span className="flex size-12 items-center justify-center border border-[var(--color-signal-deep)]/25 bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]">
+              <span className="flex size-12 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-signal-deep)]/25 bg-[var(--color-accent-soft)] text-[var(--color-accent-dark)]">
                 <Icon className="size-5" aria-hidden />
               </span>
               <h3 className="font-heading text-base font-bold text-[var(--color-charcoal)]">{title}</h3>

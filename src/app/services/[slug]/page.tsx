@@ -67,7 +67,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
               key={sign}
               as="li"
               delay={(i % 2) * 100}
-              className="flex items-start gap-3 border border-[var(--color-charcoal)]/10 bg-[var(--color-cream)] p-4"
+              className="flex items-start gap-3 rounded-[var(--radius)] border border-[var(--color-charcoal)]/10 bg-[var(--color-cream)] p-4"
             >
               <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-[var(--color-secondary-deep)]" aria-hidden />
               <span className="text-sm leading-relaxed text-[var(--color-charcoal)]/75">{sign}</span>

@@ -17,7 +17,7 @@ export function Footer() {
       <Container className="grid grid-cols-1 gap-12 py-16 sm:py-20 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div className="flex flex-col gap-4">
           <Link href="/" className="flex items-center gap-2.5 font-heading text-lg font-bold">
-            <span className="flex size-9 items-center justify-center border border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-charcoal)]">
+            <span className="flex size-9 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-charcoal)]">
               <ShieldMark />
             </span>
             {business.name}

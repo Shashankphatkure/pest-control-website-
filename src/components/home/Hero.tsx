@@ -81,6 +81,7 @@ export function Hero() {
               className="size-full"
               frame
               priority
+              rounded="top"
             />
           </div>
           <PestPickerCard className="border-t-0" />
