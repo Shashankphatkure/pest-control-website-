@@ -15,7 +15,7 @@ export const business = {
   whatsapp: "+91 90000 00000", // TODO: real WhatsApp number
   whatsappNumber: "919000000000", // TODO: WhatsApp number, digits only, with country code
   email: "hello@sentinelpest.example", // TODO
-  address: "TODO: Street address, Locality, Mumbai, Maharashtra – 400001", // TODO
+  address: "Street address, Locality, Mumbai, Maharashtra – 400001", // TODO: real address
   hours: "Mon–Sat, 9:00 AM – 7:00 PM", // TODO
   mapEmbedUrl: "", // TODO: Google Maps embed URL
   googleRating: null as number | null, // TODO: e.g. 4.9 — leave null until verified
